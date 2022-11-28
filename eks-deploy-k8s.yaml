@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: my-springboot-app2
-        image: 071913595299.dkr.ecr.us-east-1.amazonaws.com/springboot-app2:latest
+        image: 071913595299.dkr.ecr.us-east-1.amazonaws.com/springbootapp2:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8086
