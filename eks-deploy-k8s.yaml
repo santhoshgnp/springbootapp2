@@ -19,7 +19,7 @@ spec:
         image: 071913595299.dkr.ecr.us-east-1.amazonaws.com/springbootapp2:latest
         imagePullPolicy: Always
         ports:
-        - containerPort: 8086
+        - containerPort: 8000
           name: http
           protocol: TCP
 # service type loadbalancer       
@@ -34,9 +34,9 @@ metadata:
 spec:
   ports:
   - name: http
-    port: 80
+    port: 8000
     protocol: TCP
-    targetPort: 8086
+    targetPort: 8000
   type: LoadBalancer
   selector:
     app: springboot-app2
