@@ -4,6 +4,7 @@ metadata:
   labels:
     app: springboot-app2
   name: springboot-app2
+  namespace: demo-ns
 spec:
   replicas: 1
   selector:
