@@ -40,4 +40,23 @@ spec:
     targetPort: 8000
   type: LoadBalancer
   selector:
-    app: springboot-app
+    app: springboot-app2
+    # Ingress
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: springboot-app-ingress
+  namespace: demo-ns
+  labels:
+    app: springboot-app2
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /app1
+            pathType: Prefix
+            backend:
+              service:
+                name: springboot-app2
+                port:
+                  number: 80                    
